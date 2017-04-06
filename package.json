@@ -1,0 +1,23 @@
+{
+  "name": "generation",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5igel/generation.git"
+  },
+  "author": "Sergii Kocherev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/5igel/generation/issues"
+  },
+  "homepage": "https://github.com/5igel/generation#readme",
+  "dependencies": {
+    "hapi": "16.1.1",
+    "inert": "4.2.0"
+  }
+}
