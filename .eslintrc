@@ -1,0 +1,24 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "rules": {
+    "no-class-assign": 0,
+    "func-call-spacing": 0,
+    "max-len": 0,
+    "no-console": 0,
+    "no-invalid-this": 0,
+    "indent": ["error", 2, {"SwitchCase": 1}]
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "globals": {
+    "$": true,
+    "Waypoint": true
+  }
+}
