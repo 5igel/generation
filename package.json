@@ -12,7 +12,8 @@
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --bail --open",
     "build": "cross-env NODE_ENV=production webpack -p --colors",
-    "heroku": "npm run build && node index.js"
+    "heroku": "node index.js",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "angular": "1.6.4",
