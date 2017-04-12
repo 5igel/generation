@@ -3,6 +3,7 @@
 import route from './main.route';
 
 const mainPageModule = angular.module('main-module', [
+  'core.shared',
   'ui.router'
 ]);
 

@@ -1,12 +1,17 @@
 'use strict';
-import  _ from 'lodash/core';
-import angularLogo from '_images/angular.png';
+import logo from '_images/logo.png';
 
-function MainController($log) {
+/**
+ * MainController
+ * @param {Logger} $log [description]
+ * @param {SiteDataService} pgSiteDataService [description]
+ */
+function MainController($log, pgSiteDataService) {
   'ngInject';
   $log.debug('Hello from main controller!');
-  this.lodash_version = _.VERSION;
-  this.angularLogo = angularLogo;
+  this.logo = logo;
+  this.menuItems = pgSiteDataService.menuItems;
+  this.links = pgSiteDataService.siteMap;
 }
 
 export default MainController;
