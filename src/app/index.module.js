@@ -10,6 +10,7 @@ import coreModule from './core/core.module';
 import indexComponents from './index.components';
 import indexRoutes from './index.routes';
 import mainModule from './pages/main/main.module';
+import tournamentModule from './pages/tournament/tournament.module';
 
 const App = angular.module('generation', [
   // plugins
@@ -32,7 +33,8 @@ const App = angular.module('generation', [
   indexRoutes.name,
 
   // pages
-  mainModule.name
+  mainModule.name,
+  tournamentModule.name
 
 ]);
 

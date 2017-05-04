@@ -3,18 +3,16 @@
 import mainTpl from './main.html';
 import mainController from './main.controller';
 
-function routeConfig($stateProvider, pgSiteMap) {
+function routeConfig($stateProvider, urlsMap) {
   'ngInject';
 
-  console.log(pgSiteMap);
   $stateProvider
     .state('main', {
-      url: pgSiteMap.HOME,
-      //url: '/',
+      url: urlsMap.HOME,
       templateUrl: mainTpl,
       controller: mainController,
       controllerAs: 'main'
     });
 }
 
-export default ['$stateProvider', 'pgSiteMap', routeConfig];
+export default ['$stateProvider', 'urlsMap', routeConfig];

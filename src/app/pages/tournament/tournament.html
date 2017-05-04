@@ -1,0 +1,23 @@
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2 sidebar">
+    <header class="nav-header">
+        <a ui-sref="{{main.links.HOME}}" class="docs-logo" href="/">
+            <img ng-src="{{main.logo}}">
+            <h1 class="md-heading">Поколение</h1>
+        </a>
+    </header>
+
+    <md-list>
+        <md-list-item ng-repeat="item in main.menuItems">
+            <md-button class="menu-item" ui-sref="{{item.href}}">{{ item.label }}</md-button>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+
+<div layout="column" flex>
+    <md-toolbar layout="row">
+        <md-button class="menu" hide-gt-sm aria-label="Show User List">
+            <md-icon>menu</md-icon>
+        </md-button>
+        <h3>Angular Material Starter</h3>
+    </md-toolbar>
+</div>

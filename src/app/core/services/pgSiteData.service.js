@@ -8,10 +8,11 @@ class SiteDataService {
   /**
    * @constructor
    * @param  {Logger} $log [description]
+   * @param  {Object} urlsMap [description]
    */
-  constructor($log, pgSiteMap) {
+  constructor($log, urlsMap) {
     $log.debug('site data init');
-    this._pgSiteMap = pgSiteMap;
+    this._urlsMap = urlsMap;
   }
 
   /**
@@ -22,11 +23,11 @@ class SiteDataService {
   get menuItems() {
     return [
       {
-        href: this._pgSiteMap.HOME,
+        href: this._urlsMap.HOME,
         label: 'Главная',
       },
       {
-        href: 'tyrnir',
+        href: this._urlsMap.TOURNAMENT,
         label: 'Турнир',
       },
       {
@@ -49,13 +50,13 @@ class SiteDataService {
    * @return {SiteMap} [description]
    */
   get siteMap() {
-    return this._pgSiteMap;
+    return this._urlsMap;
   }
 }
 
 /** @param {Application} app */
 export default (app) => {
-  app.factory('pgSiteDataService', ['$log', 'pgSiteMap', ($log, pgSiteMap) => {
-    return new SiteDataService($log, pgSiteMap);
+  app.factory('pgSiteDataService', ['$log', 'urlsMap', ($log, urlsMap) => {
+    return new SiteDataService($log, urlsMap);
   }]);
 };
